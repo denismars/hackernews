@@ -4,7 +4,7 @@ A Project Structure for developing with a [Vue.js](http://vuejs.org/) MVVM front
 
 Using HackerNews as a demo application to show the power and simplicity of running Vue.js (connected to HN via HN's Firebase API) with a Sails.js MVC behind it to build up your own back end API.
 
-[b] Project Structure:
+Project Structure:
 
 ```
 
