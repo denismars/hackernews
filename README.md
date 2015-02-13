@@ -2,9 +2,9 @@
 
 A Project Structure for developing on a Vue.js MVVM front end with a Sails.js MVC on the back end.
 
-Using Hackernews as a demo application to show the power and simplicity of running Vue.js (connected to HN via HN's Firebase API) with a Sails.js MVC behind it to build up your own back end API.
+Using HackerNews as a demo application to show the power and simplicity of running Vue.js (connected to HN via HN's Firebase API) with a Sails.js MVC behind it to build up your own back end API.
 
-To run:
+To run (go to terminal and type):
 
 git clone https://github.com/denismars/hackernews.git
 
