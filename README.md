@@ -9,17 +9,17 @@ Project Structure:
 ```
 
 ├── api
-├── app.js
 ├── assets
 ├── clients
 ├── config
+├── node_modules
+├── tasks
+├── views
 ├── Gruntfile.js
 ├── LICENSE
-├── node_modules
-├── package.json
 ├── README.md
-├── tasks
-└── views
+├── app.js
+└── package.json
 
 ```
 
