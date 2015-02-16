@@ -25,8 +25,12 @@
   </ul>
   <!-- navigation -->
   <div class="nav" v-show="items.length > 0">
-    <a v-if="params.page > 1" href="#/news/{{params.page - 1}}">&lt; prev</a>
-    <a v-if="params.page < 4" href="#/news/{{params.page + 1}}">more...</a>
+    <a v-if="params.page > 1" 
+        v-route="/news/{{params.page - 1}}" 
+        href="/news/{{params.page - 1}}">&lt; prev</a>
+    <a v-if="params.page < 4" 
+        v-route="/news/{{params.page + 1}}" 
+        href="/news/{{params.page + 1}}">more...</a>
   </div>
 </div>
 </template>

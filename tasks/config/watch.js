@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 		},
 		webpack: {
 			// Webpack Client files to watch
-			files: ['clients/web/**/*.vue'],
+			files: ['clients/web/**/*.vue', 'clients/web/**/*.js'],
 
 			// When Webpack clients are changed:
 			tasks: ['webpack']

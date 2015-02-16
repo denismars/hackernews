@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 
                 // --- Dependencies Libraries - First Order ---
 
-                /*{ //Include jQuery into dependencies
+                { //Include jQuery into dependencies
                     expand: true,
                     cwd: 'node_modules/',
                     src: ['jquery/dist/jquery.js'],
@@ -37,12 +37,12 @@ module.exports = function(grunt) {
                     src: ['underscore/underscore.js'],
                     dest: './assets/js/dependencies/',
                     flatten: true,
-                },*/
+                },
 
 
                 // --- Vendor Libraries - Second Order ---
 
-                /*{   //Include Bootsrap js into vendors
+                {   //Include Bootsrap js into vendors
                     expand: true,
                     cwd: 'node_modules/',
                     src: ['bootstrap/dist/js/bootstrap.js'],
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
                     src: ['bootstrap/dist/fonts/**.*'],
                     dest: './assets/fonts/',
                     flatten: true,
-                }*/
+                }
 
                 //  Notes:      These are commented out as they are not needed for this
                 //              Hackernews demos site, but for other projects you may

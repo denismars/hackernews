@@ -1,34 +1,51 @@
 /**
  * Boot up the Vue instance and wire up the router.
  */
-
+var hn = {}
 var Vue = require('vue')
 var Router = require('director').Router
-var app = new Vue(require('./app.vue'))
-var router = new Router()
+hn.app = new Vue(require('./app.vue'))
+hn.router = new Router()
 
-router.on('/news/:page', function (page) {
+Vue.config.debug = true
+
+hn.router.on('/', function () {
   window.scrollTo(0, 0)
-  app.view = 'news-view' //See how we can access .view .. this is because of data.view in app.vue
-  app.params.page = +page
+  hn.app.view = 'news-view'
+  hn.app.params.page = 1
 })
 
-router.on('/user/:id', function (id) {
+hn.router.on('/news', function () {
   window.scrollTo(0, 0)
-  app.view = 'user-view'
-  app.params.userId = id
+  hn.app.view = 'news-view'
+  hn.app.params.page = 1
 })
 
-router.on('/item/:id', function (id) {
+hn.router.on('/news/:page', function (page) {
   window.scrollTo(0, 0)
-  app.view = 'item-view'
-  app.params.itemId = id
+  hn.app.view = 'news-view'
+  hn.app.params.page = +page
 })
 
-router.configure({
+hn.router.on('/user/:id', function (id) {
+  window.scrollTo(0, 0)
+  hn.app.view = 'user-view'
+  hn.app.params.userId = id
+})
+
+hn.router.on('/item/:id', function (id) {
+  window.scrollTo(0, 0)
+  hn.app.view = 'item-view'
+  hn.app.params.itemId = id
+})
+
+hn.router.configure({
+  html5history: true,
   notfound: function () {
-    router.setRoute('/news/1')
+    hn.router.setRoute('/news/1')
   }
 })
 
-router.init('/news/1')
+hn.router.init()
+
+window.hn = hn

@@ -36,11 +36,11 @@
   <p class="subtext">
     <span v-show="showInfo">
       {{score}} points by
-      <a href="#/user/{{by}}">{{by}}</a>
+      <a v-route="/user/{{by}}" href="/user/{{by}}">{{by}}</a>
     </span>
     {{time | fromNow}} ago
     <span class="comments-link" v-show="showInfo">
-      | <a href="#/item/{{id}}">comments</a>
+      | <a v-route="/item/{{id}}" href="/item/{{id}}">comments</a>
     </span>
   </p>
 </template>

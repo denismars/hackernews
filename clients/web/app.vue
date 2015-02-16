@@ -68,7 +68,7 @@ footer
     <a id="yc" href="http://www.ycombinator.com">
       <img src="https://news.ycombinator.com/y18.gif">
     </a>
-    <h1><a href="#">Hacker News </a></h1>
+    <h1><a v-route="/" href="/">Hacker News </a></h1>
     <span class="source">
       Built with <a href="http://vuejs.org" target="_blank">Vue.js</a> |
       <a href="https://github.com/yyx990803/vue-hackernews" target="_blank">Source</a>
@@ -88,7 +88,7 @@ console.log('We are running Underscore Ver. ', _.VERSION);
 
 // Set up the main app here.
 module.exports = {
-  el: '#app', //Important to reference the top level App using (Css selector '#app')
+  el: '#main_app', //Important to reference the top level App using (Css selector '#app')
   data: { //This data object will bind to all elements and accessible interfaces.
     view: '',
     hacker : 'Denis Mars',
@@ -97,6 +97,9 @@ module.exports = {
       userId: null,
       itemId: null
     }
+  },
+  directives: {
+    "route": require('./directives/route')
   },
   filters: {//Load in your filters here to use anywhere througout your app.
     fromNow: require('./filters/from-now'),

@@ -6,6 +6,7 @@
   .label
     display inline-block
     min-width 60px
+    color #333
   .about
     margin-top 1em
   .links a

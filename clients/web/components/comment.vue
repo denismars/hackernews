@@ -23,7 +23,7 @@
   <li v-show="text">
     <div class="comhead">
       <a class="toggle" v-on="click:open = !open">{{open ? '[-]' : '[+]'}}</a>
-      <a href="#/user/{{by}}">{{by}}</a>
+      <a v-route="/user/{{by}}" href="/user/{{by}}">{{by}}</a>
       {{time | fromNow}} ago
     </div>
     <div class="comment-content" v-html="text" v-show="open"></div>

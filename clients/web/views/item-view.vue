@@ -44,7 +44,10 @@ module.exports = {
       params: {
         itemId: null
       },
-      item: null,
+      item: {
+        kids : null,
+        parts : null
+      },
       pollOptions: null,
       comments: []
     }
@@ -58,10 +61,13 @@ module.exports = {
   methods: {
     update: function () {
       store.fetchItem(this.params.itemId, function (item) {
+        console.log('got item', this.params.itemId, item);
         this.item = item
-        this.fetchComments()
-        if (item.type === 'poll') {
-          this.fetchPollOptions()
+        if(this.item) {
+          this.fetchComments()
+          if (item.type === 'poll') {
+            this.fetchPollOptions()
+          }
         }
       }.bind(this))
     },
