@@ -47,12 +47,9 @@ module.exports = {
   watch: {
     'params.userId': 'update'
   },
-  compiled: function () {
-    this.update()
-  },
   methods: {
     update: function () {
-      store.fetchUser(this.id, function (user) {
+      store.fetchUser(this.params.userId, function (user) {
         this.user = user
       }.bind(this))
     }

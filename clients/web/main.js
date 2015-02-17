@@ -7,7 +7,9 @@ var Router = require('director').Router
 hn.app = new Vue(require('./app.vue'))
 hn.router = new Router()
 
-Vue.config.debug = true
+console.log('Initializing HAcker News Web Application....');
+
+Vue.config.debug = false
 
 hn.router.on('/', function () {
   window.scrollTo(0, 0)

@@ -36,6 +36,7 @@ store.fetchItem = function (id, cb) {
  */
 
 store.fetchUser = function (id, cb) {
+  console.log('Getting user', id);
   api.child('user/' + id).once('value', function (snapshot) {
     cb(snapshot.val())
   })

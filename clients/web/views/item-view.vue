@@ -55,13 +55,9 @@ module.exports = {
   watch: {
     'params.itemId': 'update'
   },
-  compiled: function () {
-    this.update()
-  },
   methods: {
     update: function () {
       store.fetchItem(this.params.itemId, function (item) {
-        console.log('got item', this.params.itemId, item);
         this.item = item
         if(this.item) {
           this.fetchComments()
